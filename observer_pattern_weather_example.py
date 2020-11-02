@@ -1,6 +1,7 @@
 # Observer pattern weather station example
 
 import requests
+import re
 from secrets import API_ENDPOINT, API_KEY
 from observer_pattern import ObservableInterface, ObserverInterface
 
@@ -81,13 +82,16 @@ class Display(ObserverInterface):
     
 # takes a city string input and returns the input
 def getCityInput():
+    # city regex validator pattern
+    pattern = r"^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$"
     while True:
-        try:
-            city = input('ENTER CITY NAME FOR WEATHER INFORMATION: ')
+        city = input('ENTER CITY NAME FOR WEATHER INFORMATION: ')
+        # only return city that pass validator
+        if re.match(pattern, city):
             return city
-        except:
-            print('YOU MUST ENTER A VALID CITY NAME')
-            continue
+        print('YOU MUST ENTER A VALID CITY NAME')
+        continue
+
         
 
 # main 
