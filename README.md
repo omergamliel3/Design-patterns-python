@@ -1,2 +1,2 @@
 # design-patterns-python
-implementing OOP design patterns
+ Implementing Design Patterns for Object Oriented Languages from Head First: Design Patterns 
