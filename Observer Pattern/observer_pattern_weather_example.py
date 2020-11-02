@@ -47,7 +47,7 @@ class WeatherStation(ObservableInterface):
             # make http get requests
             response = requests.get(f'{API_ENDPOINT}/weather?q={self.city}&appid={API_KEY}')
             # handle bad response
-            if response.ok == False:
+            if not response.ok:
                 print('Bad request. Message:' ,response.json()['message'])
                 return
             # extract weather data from response 

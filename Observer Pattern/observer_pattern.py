@@ -1,12 +1,12 @@
 # Observer pattern
 
 # Observer Interface
-class ObserverInterface():
+class ObserverInterface:
     def update(self):
         raise NotImplementedError
 
 # Observable Interface
-class ObservableInterface():
+class ObservableInterface:
     def add(self,  observer: ObserverInterface):
         raise NotImplementedError
 
@@ -60,9 +60,9 @@ class ConcreteObserver(ObserverInterface):
 def main():
     # create observable instance
     observable = ConcreteObservable()
-    # create observer A instace
+    # create observer A instance
     observerA = ConcreteObserver(observable)
-    # create observer B instace
+    # create observer B instance
     observerB = ConcreteObserver(observable)
     # add observer A to observable 
     observable.add(observerA)
