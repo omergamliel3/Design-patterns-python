@@ -5,7 +5,6 @@ import re
 from secrets import API_ENDPOINT, API_KEY
 from observer_pattern import ObservableInterface, ObserverInterface
 
-CITY_NAME = 'LONDON'
 
 # Implement concrete observable, as WeatherStation
 class WeatherStation(ObservableInterface):
