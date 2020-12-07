@@ -1,4 +1,4 @@
-# decorator pattern
+# Decorator pattern
 
 class Interface:
     def description(self):
@@ -11,3 +11,10 @@ class Concrete(Interface):
         pass
     def cost(self):
         pass
+
+
+def main():
+    pass
+
+if __name__ == "__main__":
+    main()
